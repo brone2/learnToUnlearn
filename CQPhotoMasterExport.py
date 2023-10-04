@@ -99,6 +99,7 @@ for index, row in df_for_csv.iterrows():
             print("Error:", response.status_code, response.text)
             ref.child('photos').child(photoKey).update({'editedPhotoUrl': 'unable_to_process'})
             # *******End Photo Editing
+            # And begin the more fun things!
 # Export the data
 photo_dict_for_export = ref.child('photos').get()
 df_export_prep = [v for v in photo_dict_for_export.values()]
