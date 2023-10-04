@@ -104,7 +104,7 @@ for index, row in df_for_csv.iterrows():
 photo_dict_for_export = ref.child('photos').get()
 df_export_prep = [v for v in photo_dict_for_export.values()]
 df_export_prep = pd.DataFrame(df_export_prep)
-# Filter for country!
+# Filter for country! Pushing it back!
 # if country_name != "ALL":
 #   df_export_prep = df_export_prep[df_export_prep['country'] == country_name]
 # print(datetime.utcfromtimestamp(df_export_prep['timestamp']).strftime('%Y-%m-%d %H:%M:%S'))
